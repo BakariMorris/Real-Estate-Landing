@@ -56,27 +56,21 @@ export const contactFormSchema = z.object({
   
   phone: z
     .string()
-    .min(10, 'Phone number must be at least 10 digits')
-    .max(15, 'Phone number must be less than 15 digits')
-    .regex(/^[\+]?[1-9][\d]{0,15}$/, 'Please enter a valid phone number'),
+    .optional()
+    .refine((val) => !val || (val.length >= 10 && /^[\+]?[1-9][\d]{0,15}$/.test(val)), {
+      message: 'Please enter a valid phone number',
+    }),
   
-  subject: z
-    .string()
-    .min(5, 'Subject must be at least 5 characters')
-    .max(100, 'Subject must be less than 100 characters'),
+  propertyType: z.enum(['buying', 'selling', 'investing', 'consultation', 'other'], {
+    message: 'Please select what you\'re interested in',
+  }),
   
   message: z
     .string()
-    .min(10, 'Message must be at least 10 characters')
-    .max(1000, 'Message must be less than 1000 characters'),
-  
-  preferredContact: z.enum(['email', 'phone', 'either'], {
-    message: 'Please select your preferred contact method',
-  }),
-  
-  timeline: z.enum(['immediate', 'within_month', 'within_3_months', 'within_6_months', 'exploring'], {
-    message: 'Please select your timeline',
-  }),
+    .optional()
+    .refine((val) => !val || val.length <= 1000, {
+      message: 'Message must be less than 1000 characters',
+    }),
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;

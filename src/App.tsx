@@ -4,6 +4,7 @@ import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Testimonials from './components/sections/Testimonials';
 import MarketInsights from './components/sections/MarketInsights';
+import Contact from './components/sections/Contact';
 import Footer from './components/ui/Footer';
 
 function App() {
@@ -25,13 +26,7 @@ function App() {
         <Services />
         <Testimonials />
         <MarketInsights />
-        
-        <section id="contact" className="section-padding bg-primary-50">
-          <div className="container mx-auto container-padding text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact Section</h2>
-            <p className="text-gray-600">Contact form and information coming soon...</p>
-          </div>
-        </section>
+        <Contact />
       </main>
       
       <Footer />
