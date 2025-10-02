@@ -113,16 +113,14 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Professional Photo Placeholder */}
+            {/* Professional Photo */}
             <div className="relative">
-              <div className="w-80 h-96 mx-auto lg:mx-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-primary-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white text-3xl font-bold">JS</span>
-                  </div>
-                  <p className="text-gray-600 text-sm">Professional Photo</p>
-                  <p className="text-gray-500 text-xs">Coming Soon</p>
-                </div>
+              <div className="w-80 h-96 mx-auto lg:mx-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl overflow-hidden">
+                <img 
+                  src="https://i.pravatar.cc/400?img=47"
+                  alt="Jane Smith - Real Estate Professional"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative Elements */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent-200 rounded-full opacity-60"></div>

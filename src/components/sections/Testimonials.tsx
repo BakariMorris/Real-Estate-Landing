@@ -29,7 +29,7 @@ const Testimonials: React.FC = () => {
       rating: 5,
       date: "March 2024",
       result: "Saved $15,000 under asking price",
-      avatar: "SJ",
+      avatar: "https://i.pravatar.cc/150?img=44",
       avatarBg: "bg-gradient-to-br from-pink-400 to-purple-500",
       testimonial: "Jane made our first home buying experience absolutely seamless. She was incredibly patient with all our questions and helped us navigate the competitive market. Her negotiation skills saved us $15,000 off the asking price! We couldn't have asked for a better agent.",
       details: {
@@ -46,7 +46,7 @@ const Testimonials: React.FC = () => {
       rating: 5,
       date: "February 2024",
       result: "Sold 20% above market value",
-      avatar: "RC",
+      avatar: "https://i.pravatar.cc/150?img=7",
       avatarBg: "bg-gradient-to-br from-blue-400 to-cyan-500",
       testimonial: "Outstanding service from start to finish! Jane's marketing strategy and professional photography showcased our home beautifully. We received multiple offers within the first week and sold for 20% above our initial asking price. Her expertise in the luxury market is unmatched.",
       details: {
@@ -63,7 +63,7 @@ const Testimonials: React.FC = () => {
       rating: 5,
       date: "January 2024",
       result: "12% ROI within first year",
-      avatar: "ER",
+      avatar: "https://i.pravatar.cc/150?img=32",
       avatarBg: "bg-gradient-to-br from-green-400 to-emerald-500",
       testimonial: "Jane's investment expertise helped me build a profitable rental portfolio. She identified high-potential properties and provided detailed ROI analysis for each option. The property she recommended is already generating 12% annual returns. I'm definitely working with her for future investments.",
       details: {
@@ -80,7 +80,7 @@ const Testimonials: React.FC = () => {
       rating: 5,
       date: "December 2023",
       result: "Perfect home for growing family",
-      avatar: "DT",
+      avatar: "https://i.pravatar.cc/150?img=14",
       avatarBg: "bg-gradient-to-br from-orange-400 to-red-500",
       testimonial: "With our family growing, we needed more space but weren't sure we could afford it. Jane showed us creative financing options and found us the perfect home within our budget. Her attention to our family's needs and timeline was exceptional.",
       details: {
@@ -97,7 +97,7 @@ const Testimonials: React.FC = () => {
       rating: 5,
       date: "November 2023",
       result: "Found dream condo in perfect location",
-      avatar: "JM",
+      avatar: "https://i.pravatar.cc/150?img=26",
       avatarBg: "bg-gradient-to-br from-indigo-400 to-purple-500",
       testimonial: "As a busy professional, I needed someone who could handle everything efficiently. Jane understood my lifestyle needs and found me a stunning condo with amazing city views. The entire process was smooth and stress-free. I love my new home!",
       details: {
@@ -114,7 +114,7 @@ const Testimonials: React.FC = () => {
       rating: 5,
       date: "October 2023",
       result: "Smooth transition to retirement home",
-      avatar: "MW",
+      avatar: "https://i.pravatar.cc/150?img=59",
       avatarBg: "bg-gradient-to-br from-teal-400 to-blue-500",
       testimonial: "After 30 years in our family home, downsizing felt overwhelming. Jane made the transition so much easier. She helped us sell our large home quickly and found us a perfect retirement community. Her patience and understanding meant everything to us.",
       details: {
@@ -227,8 +227,12 @@ const Testimonials: React.FC = () => {
                   {/* Client Info */}
                   <div className="text-center lg:text-left">
                     {/* Avatar */}
-                    <div className={`w-24 h-24 ${current.avatarBg} rounded-full mx-auto lg:mx-0 mb-4 flex items-center justify-center text-white text-2xl font-bold shadow-lg`}>
-                      {current.avatar}
+                    <div className="w-24 h-24 rounded-full mx-auto lg:mx-0 mb-4 overflow-hidden shadow-lg">
+                      <img 
+                        src={current.avatar} 
+                        alt={`${current.name} - Client Photo`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     
                     {/* Client Details */}
@@ -345,8 +349,12 @@ const Testimonials: React.FC = () => {
               >
                 {/* Client Header */}
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className={`w-12 h-12 ${testimonial.avatarBg} rounded-full flex items-center justify-center text-white font-bold`}>
-                    {testimonial.avatar}
+                  <div className="w-12 h-12 rounded-full overflow-hidden">
+                    <img 
+                      src={testimonial.avatar} 
+                      alt={`${testimonial.name} - Client Photo`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
