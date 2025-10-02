@@ -115,7 +115,7 @@ const About: React.FC = () => {
           >
             {/* Professional Photo */}
             <div className="relative">
-              <div className="w-80 h-96 mx-auto lg:mx-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="w-80 h-80 mx-auto lg:mx-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-full shadow-2xl overflow-hidden">
                 <img 
                   src="https://avatar.iran.liara.run/public/girl"
                   alt="Jane Smith - Real Estate Professional"
