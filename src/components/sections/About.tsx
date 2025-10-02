@@ -117,7 +117,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="w-80 h-96 mx-auto lg:mx-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl overflow-hidden">
                 <img 
-                  src="https://i.pravatar.cc/400?img=20"
+                  src="https://avatar-placeholder.iran.liara.run/female?username=jane-smith"
                   alt="Jane Smith - Real Estate Professional"
                   className="w-full h-full object-cover"
                 />
